@@ -43,8 +43,10 @@ public class DemoApplicationTests {
     public void testTestTest() throws Exception {
         this.mockMvc.perform(get("/get"))
                 .andDo(print())
-                .andExpect(status().isCreated())
-                .andExpect(content().string("this is a strin1g"));
+                .andExpect(status().isOk())
+                .andExpect(content().string("this is a string"));
     }
+
+
 
 }
